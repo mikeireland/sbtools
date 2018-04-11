@@ -39,5 +39,8 @@ if __name__=="__main__":
         M1,M2 = m1m2_from_k(K1,K2,P,inc)
         M1s.append(M1)
         M2s.append(M2)
+    M1s = np.array(M1s)
+    M2s = np.array(M2s)
     print("M1: {:5.2f} +/- {:5.2f}".format(np.mean(M1s), np.std(M1s)))
     print("M2: {:5.2f} +/- {:5.2f}".format(np.mean(M2s), np.std(M2s)))
+    print("M2/M1: {:5.3f} +/- {:5.3f}".format(np.mean(M2s/M1s), np.std(M2s/M1s)))
